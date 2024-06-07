@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "material-dashboard-angular": {
+    "admin-dashboard": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -85,14 +85,14 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "buildTarget": "material-dashboard-angular:build"
+            "buildTarget": "admin-dashboard:build"
           },
           "configurations": {
             "production": {
-              "buildTarget": "material-dashboard-angular:build:production"
+              "buildTarget": "admin-dashboard:build:production"
             },
             "development": {
-              "buildTarget": "material-dashboard-angular:build:development"
+              "buildTarget": "admin-dashboard:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -100,7 +100,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "material-dashboard-angular:build"
+            "buildTarget": "admin-dashboard:build"
           }
         },
         "test": {
@@ -143,7 +143,7 @@
         }
       }
     },
-    "material-dashboard-angular-e2e": {
+    "admin-dashboard-e2e": {
       "root": "",
       "sourceRoot": "",
       "projectType": "application",
@@ -152,7 +152,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "material-dashboard-angular:serve"
+            "devServerTarget": "admin-dashboard:serve"
           }
         },
         "lint": {
