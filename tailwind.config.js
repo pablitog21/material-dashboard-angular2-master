@@ -293,6 +293,13 @@ module.exports = {
           }
         }
       })
+    },
+    boxShadow: {
+      'big': '0 10px 20px rgba(0, 0, 0, 0.1)',
+    },
+    spacing: {
+      '7.5': '1.875rem', // 30px
+      '18': '4.5rem',    // 72px
     }
   },
   plugins: [

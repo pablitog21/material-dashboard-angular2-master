@@ -11,8 +11,8 @@
     left: 0;
     z-index: 2;
     width: 260px;
-    background: $white-color;
-    @include shadow-big();
+    background: #ffffff; /* Color blanco */
+    box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 
     .logo-img {
         width: 35px;
@@ -40,7 +40,6 @@
 
         li {
             >a {
-
                 &:hover,
                 &:focus {
                     background-color: transparent;
@@ -57,7 +56,7 @@
             & .dropdown-menu a:focus,
             &.active>[data-toggle="collapse"] {
                 background-color: rgba(200, 200, 200, 0.2);
-                color: $black-color;
+                color: #000000; /* Color negro */
                 box-shadow: none;
             }
 
@@ -69,7 +68,7 @@
 
             &.active>a,
             &.active>a i {
-                color: $white-color;
+                color: #ffffff; /* Color blanco */
             }
 
             &.separator {
@@ -114,16 +113,16 @@
     .nav li a,
     .nav li .dropdown-menu a {
         margin: 10px 15px 0;
-        border-radius: $border-radius-base;
-        color: $black-color;
+        border-radius: 4px; /* Radio del borde */
+        color: #000000; /* Color negro */
         padding-left: 10px;
         padding-right: 10px;
         text-transform: capitalize;
-        font-size: $font-paragraph - 1;
+        font-size: 13px; /* Tamaño de fuente */
         padding: 10px 15px;
     }
 
-    .logo {
+    .logo { 
         padding: 15px 0px;
         margin: 0;
         display: block;
@@ -138,25 +137,24 @@
             height: 1px;
             width: calc(100% - 30px);
             background-color: rgba(180, 180, 180, .3);
-
         }
 
         p {
             float: left;
             font-size: 20px;
             margin: 10px 10px;
-            color: $white-color;
+            color: #ffffff; /* Color blanco */
             line-height: 20px;
         }
 
         .simple-text {
             text-transform: uppercase;
-            padding: $padding-small-vertical $padding-zero;
+            padding: 8px 0; /* Relleno vertical y horizontal */
             display: inline-block;
             font-size: 18px;
-            color: $black-color;
+            color: #000000; /* Color negro */
             white-space: nowrap;
-            font-weight: $font-weight-default;
+            font-weight: normal; /* Peso de la fuente */
             line-height: 30px;
             overflow: hidden;
             text-align: center;
@@ -165,16 +163,18 @@
     }
 
     &[data-color="danger"] {
-        @include set-background-color-button($brand-danger);
+        .nav li a, // Selecciona los enlaces dentro de la lista de navegación
+        .nav li .dropdown-menu a { // Selecciona los enlaces dentro del menú desplegable
+            background-color: #000000; // Cambia el color de fondo a negro para los enlaces
+        }
     }
 }
-
 
 .main-panel {
     position: relative;
     float: right;
-    width: $sidebar-width;
-    @include transition (0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+    width: calc(100% - 260px); /* Ancho de la barra lateral */
+    transition: 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
 
     .main-content {
         margin-top: 70px;
